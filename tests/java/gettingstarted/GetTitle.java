@@ -20,13 +20,23 @@ public class GetTitle {
         options.addArguments("--remote-allow-origin=*");
         driver = new EdgeDriver(options);
         driver.get("https://www.saucedemo.com/");
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();      // maximize browser window
         Thread.sleep(2000);
     }
 
     @Test
     void teststeps() {
 
+        String act_title = driver.getTitle();
 
+        if (act_title.equals("Swag Labs"))
+        {
+            System.out.println("True");
+        }
+
+        else
+        {
+            System.out.println("False");
+        }
     }
 }
