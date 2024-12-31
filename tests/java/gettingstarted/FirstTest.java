@@ -1,12 +1,14 @@
 package gettingstarted;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+
+// Convention for writing ClassName: Use PascalCase (capitalize the first letter of each word).
 
 public class FirstTest {
 
@@ -33,6 +35,9 @@ public class FirstTest {
 
         Thread.sleep(2000); // Introduces a 2-second pause to allow the page to load.
     }
+
+// Convention For writing Function names: Use camelCase
+// (start with a lowercase letter; capitalize the first letter of subsequent words).
 
     @Test
     void teststeps() {
