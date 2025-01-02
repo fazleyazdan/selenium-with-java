@@ -34,7 +34,7 @@ public class GroupElements {
     // Note : we will use List to capture more than one web elements
     // we can also use "Set", but we can have duplicated Web elements & set can't store duplicated elements
     // List is a collection & here we will give WebElements its type. since we are storing web elements
-    // here i will count elements having "a" tag.
+    // here I will count elements having "a" tag.
     // also I will count elements having class "input-box"
 
         List <WebElement> captureInputBox = driver.findElements(By.className("input-box"));
