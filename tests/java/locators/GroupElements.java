@@ -43,6 +43,5 @@ public class GroupElements {
         List <WebElement> captureLinks = driver.findElements(By.xpath("//a"));
         System.out.println("number of elements having anchor tag:" + captureLinks.size());
 
-
     }
 }
