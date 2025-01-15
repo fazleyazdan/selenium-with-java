@@ -62,3 +62,4 @@ public class LocatorsTest {
         driver.quit();
     }
 }
+
