@@ -55,11 +55,5 @@ public class LocatorsTest {
     }
 
 
-    @AfterTest
-    void teardown() throws InterruptedException
-    {
-        Thread.sleep(1000);
-        driver.quit();
-    }
-}
+
 
