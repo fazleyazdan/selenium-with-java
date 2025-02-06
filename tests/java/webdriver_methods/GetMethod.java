@@ -28,13 +28,27 @@ public class GetMethod {
     3. driver.getCurrentUrl()        // will return active url of the web
     4. driver.getPageSource()        // will return source code of the web page
     5. driver.getWindowHandle()      // will return ID for active browser window
-    6. driver.getWindowHandles()     // will return ID of the multiple browser window
+    6. driver.getWindowHandles()     // will return ID of the multiple browser window opened
 
     */
 
     @Test
     void getMethod()
     {
+        // navigate to website
+        driver.get("https://demo.automationtesting.in/Register.html");
+
+        // get title of the web
+        System.out.println(driver.getTitle());
+
+        // get URL of the webpage
+        System.out.println(driver.getCurrentUrl());
+
+        // get Source code of the web page
+        System.out.println(driver.getPageSource());
+
+        // get ID of the browser window - Note that window ID is dynamic and it changes everytime you visit it
+        System.out.println(driver.getWindowHandle());
 
     }
 
