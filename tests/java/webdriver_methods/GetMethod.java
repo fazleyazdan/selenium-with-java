@@ -17,7 +17,7 @@ public class GetMethod {
         options.addArguments("--remote-allow-origin=*");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     /*
