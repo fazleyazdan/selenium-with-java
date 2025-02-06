@@ -1,10 +1,13 @@
 package webdriver_methods;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.util.Set;
 
 public class GetMethod {
 
@@ -47,8 +50,19 @@ public class GetMethod {
         // get Source code of the web page
         System.out.println(driver.getPageSource());
 
-        // get ID of the browser window - Note that window ID is dynamic and it changes everytime you visit it
+        // get ID of the browser window - Note that window ID is dynamic, and it changes everytime you visit it
         System.out.println(driver.getWindowHandle());
+
+        // get ID of the multiple browser window
+        // first we will open new window
+        driver.findElement(By.xpath("//a[normalize-space()='SwitchTo']")).click();
+        driver.findElement(By.cssSelector("a[href='Windows.html']")).click();
+        driver.findElement(By.cssSelector("button.btn.btn-info:first-child")).click();
+
+        // we will use Set to store multiple IDs, since IDs are unique and in set we store unique elements
+        Set <String> windowIds = driver.getWindowHandles();
+
+        System.out.println(windowIds);
 
     }
 
