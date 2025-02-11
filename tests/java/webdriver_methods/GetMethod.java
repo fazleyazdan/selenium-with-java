@@ -25,6 +25,7 @@ public class GetMethod {
 
     /*
 
+    Note : get methods are used with webdriver interface
     get Methods :
     1. driver.get(url)               // for visiting web , it won't return anything
     2. driver.getTitle()             // will return title of the web
