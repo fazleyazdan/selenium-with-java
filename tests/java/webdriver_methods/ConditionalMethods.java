@@ -49,6 +49,19 @@ public class ConditionalMethods {
         WebElement box_status = driver.findElement(By.id("name"));
         System.out.println("Enable status of input box:" + box_status.isEnabled());
 
+        // isSelected()
+        WebElement radiob_male = driver.findElement(By.id("male"));
+        WebElement radiob_female = driver.findElement(By.id("female"));
+
+        System.out.println("male radio button is selected:" + radiob_male.isSelected());       // false
+        System.out.println("female radio button is selected:" + radiob_female.isSelected());   // false
+
+        driver.findElement(By.id("male")).click();
+
+        // after selecting male radio button
+        System.out.println("male radio button is selected:" + radiob_male.isSelected());        // True
+        System.out.println("female radio button is selected:" + radiob_female.isSelected());    // false
+
 
     }
 
