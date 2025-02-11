@@ -22,7 +22,8 @@ public class ConditionalMethods {
         Thread.sleep(1000);
     }
 
-    // conditional methods are used with web elements
+    // conditional methods are used with web elements:
+
     // isDisplayed()
     // isEnabled()
     // isSelected()
@@ -42,6 +43,11 @@ public class ConditionalMethods {
 
         boolean logo_status = driver.findElement(By.cssSelector(".wikipedia-icon")).isDisplayed();
         System.out.println("display status of the logo is:" + logo_status);
+
+        // isEnabled()
+        // we may perform these actions on input boxes, search box etc
+        WebElement box_status = driver.findElement(By.id("name"));
+        System.out.println("Enable status of input box:" + box_status.isEnabled());
 
 
     }
