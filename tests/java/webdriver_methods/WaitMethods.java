@@ -21,9 +21,4 @@ public class WaitMethods {
     }
 
 
-    @Test
-    void waitCommandsTest()
-    {
-        driver.get("");
-    }
-}
+
