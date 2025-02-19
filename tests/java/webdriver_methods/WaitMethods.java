@@ -1,10 +1,14 @@
 package webdriver_methods;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 /*
 
@@ -30,13 +34,25 @@ public class WaitMethods {
         options.addArguments("--remote-allow-origin=*");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        Thread.sleep(1000);
     }
 
 
     @Test
-    void waitCommandsTest()
-    {
-        driver.get("");
+    void waitCommandsTest() throws InterruptedException {
+        driver.get("https://testautomationpractice.blogspot.com/");
+
+        // Thread.sleep() : we won't be using this method frequently
+        Thread.sleep(3000);
+        System.out.println(driver.getCurrentUrl());
+
+        // Implicit wait : This wait is applicable for all statements that comes after it
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        /* Here the default time is 0 sec and the maximum timeout is 5 sec
+           if the element is available immediately then the implicit wait won't take any
+           time. if the element is not available immediately then maximum timeout will be 5 Sec in this case
+         */
+
+        WebElement element = driver.findElement(By.xpath("//a[normalize-space()='GUI Elements']"));
+        System.out.println("status"+ element.isDisplayed());
     }
 }
