@@ -53,6 +53,6 @@ public class WaitMethods {
          */
 
         WebElement element = driver.findElement(By.xpath("//a[normalize-space()='GUI Elements']"));
-        System.out.println("status"+ element.isDisplayed());
+        System.out.println("status "+ element.isDisplayed());
     }
 }
