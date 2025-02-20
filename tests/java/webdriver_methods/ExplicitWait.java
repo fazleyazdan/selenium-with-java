@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -33,6 +36,12 @@ public class ExplicitWait {
         */
 
         driver.get("https://testautomationpractice.blogspot.com/");
+        WebDriverWait myWait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        WebElement elementAndStatus = myWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='GUI Elements']")));
+
+        // now here if you wants to do further manipulation , you don't need to locate that element. because it is already stored in "elementAndStatus"
+        elementAndStatus.click();
+
         WebElement element = driver.findElement(By.xpath("//a[normalize-space()='GUI Elements']"));
         System.out.println("status "+ element.isDisplayed());
 
