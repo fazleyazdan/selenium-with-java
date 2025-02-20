@@ -26,6 +26,7 @@ public class ExplicitWait {
         /*
             - we have two things in explicit wait
             - declaration & usage
+            - after the declaration we have to give a condition as well, for example the element should be visible, enabled etc.
             - first we will make object of WebdriverWait class
               inside the class we have constructor which expect 2 Arguments (driver & duration)
             -
