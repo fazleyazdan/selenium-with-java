@@ -37,13 +37,17 @@ public class ExplicitWait {
 
         driver.get("https://testautomationpractice.blogspot.com/");
         WebDriverWait myWait = new WebDriverWait(driver,Duration.ofSeconds(5));
-        WebElement elementAndStatus = myWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='GUI Elements']")));
+        WebElement elementAndStatus = myWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#name")));
 
         // now here if you wants to do further manipulation , you don't need to locate that element. because it is already stored in "elementAndStatus"
         elementAndStatus.click();
+        System.out.println("status "+ elementAndStatus.isEnabled());
 
-        WebElement element = driver.findElement(By.xpath("//a[normalize-space()='GUI Elements']"));
-        System.out.println("status "+ element.isDisplayed());
+
+        // once explicit wait is declared you can use it with multiple statements
+        WebElement element2 = myWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#Wikipedia1_wikipedia-search-input")));
+        element2.sendKeys("Explicit Wait");
+
 
     }
 }
