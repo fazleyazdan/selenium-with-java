@@ -44,9 +44,7 @@ public class ExplicitWait {
         System.out.println("status "+ elementAndStatus.isEnabled());
 
 
-        // once explicit wait is declared you can use it with multiple statements
-        WebElement element2 = myWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#Wikipedia1_wikipedia-search-input")));
-        element2.sendKeys("Explicit Wait");
+
 
 
     }
