@@ -50,6 +50,3 @@ public class ExplicitWait {
         WebElement element3 = myWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[name='start']")));
         element3.click();
 
-
-    }
-}
