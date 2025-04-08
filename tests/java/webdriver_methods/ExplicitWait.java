@@ -47,9 +47,3 @@ public class ExplicitWait {
         element2.sendKeys("Explicit Wait");
 
         // wait before element is clickable
-        WebElement element3 = myWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[name='start']")));
-        element3.click();
-
-
-    }
-}
