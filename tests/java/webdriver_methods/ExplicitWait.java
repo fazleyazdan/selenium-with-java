@@ -33,9 +33,6 @@ public class ExplicitWait {
             -
         */
 
-        driver.get("https://testautomationpractice.blogspot.com/");
-        WebDriverWait myWait = new WebDriverWait(driver,Duration.ofSeconds(5));
-        WebElement elementAndStatus = myWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#name")));
 
         // now here if you wants to do further manipulation , you don't need to locate that element. because it is already stored in "elementAndStatus"
         elementAndStatus.click();
