@@ -18,15 +18,6 @@ public class GroupElements {
     public static ChromeOptions options;
     public static WebDriver driver;
 
-    @BeforeTest
-    void Setup() throws InterruptedException {
-        options = new ChromeOptions();
-        options.addArguments("--remote-allow-origin=*");
-        driver = new ChromeDriver(options);
-        driver.get("https://practice.expandtesting.com/inputs");
-        driver.manage().window().maximize();      // maximize browser window
-        Thread.sleep(2000);
-    }
 
     @Test
     void countElements() {
