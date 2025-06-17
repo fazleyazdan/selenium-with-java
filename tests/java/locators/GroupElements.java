@@ -40,8 +40,6 @@ public class GroupElements {
         List <WebElement> captureInputBox = driver.findElements(By.className("input-box"));
         System.out.println("number of elements having input-box as class name:" + captureInputBox.size());
 
-        List <WebElement> captureLinks = driver.findElements(By.xpath("//a"));
-        System.out.println("number of elements having anchor tag:" + captureLinks.size());
 
     }
 }
