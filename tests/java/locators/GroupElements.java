@@ -37,11 +37,7 @@ public class GroupElements {
     // here I will count elements having "a" tag.
     // also I will count elements having class "input-box"
 
-        List <WebElement> captureInputBox = driver.findElements(By.className("input-box"));
-        System.out.println("number of elements having input-box as class name:" + captureInputBox.size());
 
-        List <WebElement> captureLinks = driver.findElements(By.xpath("//a"));
-        System.out.println("number of elements having anchor tag:" + captureLinks.size());
 
     }
 }
